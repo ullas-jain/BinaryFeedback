@@ -144,6 +144,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            tools:visibility="gone"
             android:visibility="gone">
 
             <TextView
@@ -166,15 +167,16 @@
                 android:paddingEnd="@dimen/dimen_10dp" />
 
             <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/dimen_42dp"
+                android:layout_height="@dimen/dimen_42dp"
                 card_view:cardCornerRadius="20dp"
                 card_view:cardElevation="2dp">
 
                 <View
                     android:id="@+id/feedback_saved_image"
-                    android:layout_width="@dimen/dimen_42dp"
-                    android:layout_height="@dimen/dimen_42dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:background="@drawable/feedback_icon" />
 
             </android.support.v7.widget.CardView>
