@@ -1,9 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/light_green"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FeedbackActivity">
+    android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/txt_payment_feedback_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_74dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        android:lineSpacingExtra="7sp"
+        android:text="@string/payment_feedback_main_title"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="normal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/txt_payment_feedback_description">
+
+        <RelativeLayout
+            android:id="@+id/good_feedback_description"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_34dp"
+            android:layout_marginLeft="@dimen/dimen_34dp"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="@dimen/dimen_74dp"
+                android:layout_marginRight="@dimen/dimen_74dp"
+                android:background="@drawable/payment_feedback_background"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/good_feedback_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_32dp"
+                android:layout_marginLeft="@dimen/dimen_32dp"
+                android:layout_marginEnd="@dimen/dimen_74dp"
+                android:layout_marginRight="@dimen/dimen_74dp"
+                android:text="@string/payment_feedback_good_title"
+                android:textColor="#9b9b9b"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bad_feedback_description"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_100dp"
+            android:layout_marginLeft="@dimen/dimen_100dp"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:layout_marginRight="@dimen/dimen_16dp"
+                android:background="@drawable/payment_feedback_background"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/bad_feedback_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_32dp"
+                android:layout_marginLeft="@dimen/dimen_32dp"
+                android:text="@string/payment_feedback_bad_title"
+                android:textColor="#9b9b9b"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/feedback_images_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:visibility="visible">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/good_feedback_image"
+                android:layout_width="@dimen/dimen_42dp"
+                android:layout_height="@dimen/dimen_42dp"
+                card_view:cardCornerRadius="20dp"
+                card_view:cardElevation="2dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/feedback_icon" />
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/bad_feedback_image"
+                android:layout_width="@dimen/dimen_42dp"
+                android:layout_height="@dimen/dimen_42dp"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                android:layout_marginLeft="@dimen/dimen_24dp"
+                card_view:cardCornerRadius="20dp"
+                card_view:cardElevation="2dp">
+
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rotation="180"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/feedback_icon" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/feedback_saved_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/payment_feedback_background"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:paddingStart="@dimen/dimen_48dp"
+                android:paddingLeft="@dimen/dimen_48dp"
+                android:text="@string/payment_feedback_received"
+                android:textColor="#1c1c1c"
+                android:textSize="12sp"
+                android:visibility="visible"
+                android:paddingEnd="@dimen/dimen_10dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="20dp"
+                card_view:cardElevation="2dp">
+
+                <View
+                    android:id="@+id/feedback_saved_image"
+                    android:layout_width="@dimen/dimen_42dp"
+                    android:layout_height="@dimen/dimen_42dp"
+                    android:background="@drawable/feedback_icon" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

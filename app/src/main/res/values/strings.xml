@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Binary feedback</string>
+
+    <string name="payment_feedback_main_title">Tell us about your payment experience!</string>
+    <string name="payment_feedback_good_title">What went well for you? (Optional)</string>
+    <string name="payment_feedback_notes_title">Any suggestions for us?</string>
+    <string name="payment_feedback_received">Feedback received!</string>
+    <string name="payment_feedback_bad_title">How can we improve? (Optional)</string>
 </resources>
